@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;900&display=swap');
+
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 850px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 1.5rem;
+}
+
+.wrapper .header{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+    color: #2f3542;
+}
+
+.wrapper .inner_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .inner_wrapper .editor_panel{
+    padding: 1rem;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.image_side {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrapper .inner_wrapper .image_side img{
+    border-radius: 5px;
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.editor_panel .sub_heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #2f3542;
+}
+
+
+.editor_panel .last_sub_heading{
+    margin-top: 1.2rem;
+}
+
+
+.editor_panel .input_parent{
+    margin-bottom: 0.8rem;
+}
+
+
+.editor_panel .input_parent .info{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.4rem;
+
+}
+
+.input_parent .info p{
+    font-size: 15px;
+    color: #9a9b9c;
+}
+
+.editor_panel .input_parent input{
+    width: 100%;
+}
+
+.editor_panel .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.editor_panel .buttons button{
+    padding: 0.6rem 1.1rem;
+    background-color: transparent;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid rgb(197, 197, 197);
+    color: rgb(131, 131, 131);
+    font-size: 1rem;
+}
+
+.wrapper .bottom_buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom_buttons button{
+    width: 120px;
+    height: 42px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.bottom_buttons button.select{
+    background-color: #777c86;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+.bottom_buttons .save{
+    background-color: rgb(65, 86, 207);
+    color: white;
+    border: none;
+}
+
+#file-input{
+    display: none;
+}
+
+@media only screen and (max-width: 900px){
+
+    .wrapper{
+        width: 80%;
+    }
+
+    .wrapper .inner_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper .inner_wrapper .editor_panel{
+        order: 2;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .image_side{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .image_side img{
+        width: 100%;
+    }
+    
+}
+
+@media  only screen and (max-width: 550px) {
+    .wrapper .bottom_buttons{
+        flex-direction: column;
+    }
+
+    .bottom_buttons button{
+        margin: 10px 0;
+    }
+}

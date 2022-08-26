@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Image Editor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="header">Basic Image Editor</h2>
+        <div class="inner_wrapper">
+            <div class="editor_panel">
+                    <h4 class="sub_heading">
+                        Filters
+                    </h4>
+                    <div class="input_parent">
+                        <div class="info">
+                            <p>Brightness</p>
+                            <p>100%</p>
+                        </div>
+                        <input name="brightness" type="range" value="100" min="0" max="200">
+                    </div>
+
+                    <div class="input_parent">
+                        <div class="info">
+                            <p>Saturation</p>
+                            <p>100%</p>
+                        </div>
+                        <input name="saturation" type="range" value="100" min="0" max="200">
+                    </div>
+
+                    <div class="input_parent">
+                        <div class="info">
+                            <p>Inversion</p>
+                            <p>0%</p>
+                        </div>
+                        <input name="inversion" type="range" value="0"  max="100">
+                    </div>
+
+                    <div class="input_parent">
+                        <div class="info">
+                            <p>Grayscale</p>
+                            <p>0%</p>
+                        </div>
+                        <input name="grayscale" type="range" value="0"  max="100">
+                    </div>
+
+                    <h4 class="sub_heading last_sub_heading">Rotate and Flip</h4>
+                    <div class="buttons">
+                        <button class="transform" name="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button class="transform" name="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button class="transform" name="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button class="transform" name="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+            </div>
+
+            <div class="image_side">
+                    <img src="./preview.png" alt="">
+            </div>
+        </div>
+
+        <div class="bottom_buttons">
+            <div>
+                <button class="reset">Reset Filters</button>
+            </div>
+
+            <div>
+                <input type="file" id="file-input" accept="image/*">
+                <button class="select">Select</button>
+                <button class="save">Save</button>
+            </div>
+        </div>
+    </div>
+
+<script src="./index.js"></script>
+</body>
+</html>
